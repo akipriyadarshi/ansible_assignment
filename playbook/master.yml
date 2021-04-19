@@ -1,0 +1,10 @@
+---
+  - name: Playbook to install nginx, mysql, docker and jenkins.
+    hosts: aws
+    become: yes
+    roles:
+      - docker
+      - mysql
+      - jenkins
+      - nginx
+...

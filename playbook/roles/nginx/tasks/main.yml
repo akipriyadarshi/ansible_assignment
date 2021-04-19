@@ -1,0 +1,14 @@
+---
+    - name: Installation of nginx web server and starting starting the service using handler
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
+      notify:
+        - start nginx
+
+    - name: latest version of nginx
+      apt: name=nginx state=latest
+      become: yes
+
+...
